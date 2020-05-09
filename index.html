@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+
+    <title>Covid-19 (Ao vivo)</title>
+
+
+    <!-- SEO Geral -->
+    <meta name="author" content="Eike Athylas" />
+
+    <!-- Open Graph Facebook WhatsApp -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Coronavírus em tempo real" />
+    <meta property="og:description" content="Site desenvolvido com o proposito de mostrar em tempo real as Estatísticas do COVID-19" />
+    <meta property="og:url" content="https://eikeathylas.github.io/covid-19/">
+    <meta property="og:site_name" content="Eike Athylas" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/eikeathylas/covid-19/master/img/Logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Coronavírus em tempo real" />
+    <meta name="twitter:description" content="Site desenvolvido com o proposito de mostrar em tempo real as Estatísticas do COVID-19" />
+    <meta name="twitter:url" content="https://eikeathylas.github.io/covid-19/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/eikeathylas/covid-19/master/img/Logo.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="info" class="temadark">
+
+    <nav id="nav" class="site-navbar fixe">
+        <a href="https://www.instagram.com/eikebenizio" class="site-logo"><i class="fas fa-biohazard text-white"></i> Covid-19</a>
+
+        <ul>
+            <li><a href="#info">Global</a></li>
+            <li><a href="#pais">Países</a></li>
+            <li><a href="#estados">Estados BR</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <div id="trigger" class="trigger">
+            <svg class="bars" viewBox="0 0 100 100">
+              <path class="line top" d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"></path>
+              <path class="line middle" d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"></path>
+              <path class="line bottom" d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"></path>
+            </svg>
+        </div>
+
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading"><b>Tempo real do Coronavírus</b></h1>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-danger shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Todos os infectados</div>
+                                    <div id="infcG" class="h5 mb-0 font-weight-bold">--</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-biohazard fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Todos os curados</div>
+                                    <div id="curG" class="h5 mb-0 font-weight-bold">--</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-capsules fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-secondary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Todos os mortos</div>
+                                    <div id="killG" class="h5 mb-0 font-weight-bold">--</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-skull-crossbones fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-xl-6 col-lg-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Estatísticas Global</h6>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2">
+
+                                <canvas id="pieGb"></canvas>
+
+                            </div>
+                            <div class="mt-4 text-center middle">
+                                <span class="mr-2"><i class="fas fa-circle text-danger"></i> Casos ativos</span>
+                                <span class="mr-2"><i class="fas fa-circle text-secondary"></i> Mortos</span>
+                                <span class="mr-2"><i class="fas fa-circle text-success"></i> Curados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-6 col-lg-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Estatísticas no Brasil</h6>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2">
+
+                                <canvas id="pieBR"></canvas>
+
+                            </div>
+                            <div class="mt-4 text-center middle">
+                                <span class="mr-2"><i class="fas fa-circle text-danger"></i> Casos ativos</span>
+                                <span class="mr-2"><i class="fas fa-circle text-secondary"></i> Mortos</span>
+                                <span class="mr-2"><i class="fas fa-circle text-success"></i> Curados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="pais">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Países</h2>
+                    <h3 class="section-subheading">Selecione um país e veja os dados gerais dele, no total são 30 países adicionados</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card shadow">
+                        <div class="card-header py-3"><select id="op" class="custom-select">
+                                <option value="Brazil" selected>Brasil</option>
+                                <option value="USA">Estados Unidos</option>
+                                <option value="Italy">Itália</option>
+                                <option value="China">China</option>
+                                <option value="France">França</option>
+                                <option value="Spain">Espanha</option>
+                                <option value="Germany">Alemanha</option>
+                                <option value="Turkey">Turquia</option>
+                                <option value="Czechia">Tchéquia</option>
+                                <option value="Malaysia">Malásia</option>
+                                <option value="Belgium">Bélgica</option>
+                                <option value="Iran">Irã</option>
+                                <option value="S. Korea">Coreia do Sul</option>
+                                <option value="Sweden">Suécia</option>
+                                <option value="Switzerland">Suíça</option>
+                                <option value="Austria">Áustria</option>
+                                <option value="Canada">Canadá</option>
+                                <option value="Saudi Arabia">Arábia Saudita/option>
+                                <option value="Luxembourg">Luxemburgo</option>
+                                <option value="Australia">Austrália</option>
+                                <option value="Ecuador">Equador</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Japan">Japão</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Denmark">Dinamarca</option>
+                                <option value="Indonesia">Indonésia</option>
+                                <option value="Thailand">Tailândia</option>
+                                <option value="Colombia">Colômbia</option>
+                                <option value="Mexico">México</option>
+                                <option value="Finland">Finlândia</option>
+                            </select>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="middle font-weight-bold">Casos totais:<span id="ctG" class="float-right">--</span></h5>
+                            <hr>
+                            <h5 class="middle font-weight-bold">Casos ativos:<span id="caG" class="float-right">--</span></h5>
+                            <hr>
+                            <h5 class="middle font-weight-bold">Casos sérios:<span id="csG" class="float-right">--</span></h5>
+                            <hr>
+                            <h5 class="middle font-weight-bold">Mortos:<span id="kG" class="float-right">--</span></h5>
+                            <hr>
+                            <h5 class="middle font-weight-bold">Curados:<span id="cG" class="float-right">--</span></h5>
+                            <hr>
+                            <h5 class="middle font-weight-bold">Casos novos:<span id="cnG" class="float-right">--</span></h5>
+                            <div id="estados"></div>
+                            <hr>
+                            <h5 class="middle font-weight-bold">Novos mortos:<span id="knG" class="float-right">--</span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estados">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Estados brasileiros</h2>
+                    <h3 class="section-subheading">Clique no nome de um estado para ser exibido suas cidades, todas as cidades <b>COM CASOS</b> adicionadas</h3><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card shadow">
+                        <div class="card-body">
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Acre<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="ACB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="ACMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="ACPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="AC"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Alagoas<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="ALB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="ALMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="ALPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="AL"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Amapá<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="APB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="APMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="APPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="AP"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Amazonas<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="AMB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="AMMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="AMPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="AM"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Bahia<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="BAB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="BAMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="BAPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="BA"></div>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Ceará<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="CEB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="CEMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="CEPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="CE"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Distrito Federal<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="DFB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="DFMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="DFPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="DF"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Espírito Santo<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="ESB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="ESMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="ESPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="ES"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Goiás<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="GOB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="GOMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="GOPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="GO"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Maranhão<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="MAB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="MAMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="MAPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="MA"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Mato Grosso<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="MTB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="MTMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="MTPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="MT"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Mato Grosso do Sul<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="MSB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="MSMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="MSPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="MS"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Minas Gerais<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="MGB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="MGMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="MGPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="MG"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Paraná<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="PRB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="PRMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="PRPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="PR"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Paraíba<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="PBB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="PBMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="PBPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="PB"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Pará<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="PAB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="PAMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="PAPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="PA"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Pernambuco<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="PEB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="PEMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="PEPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="PE"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Piauí<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="PIB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="PIMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="PIPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="PI"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Rio Grande do Norte<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="RNB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="RNMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="RNPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="RN"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Rio Grande do Sul<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="RSB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="RSMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="RSPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="RS"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Rio de Janeiro<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="RJB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="RJMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="RJPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="RJ"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Rondônia<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="ROB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="ROMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="ROPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="RO"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Roraima<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="RRB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="RRMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="RRPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="RR"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Santa Catarina<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="SCB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="SCMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="SCPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="SC"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Sergipe<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="SEB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="SEMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="SEPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="SE"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">São Paulo<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="SPB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="SPMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="SPPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="SP"></div>
+                                </details>
+                            </div>
+                            <hr />
+
+                            <div class="accordion">
+                                <details>
+                                    <summary class="">Tocantins<b class="float-right">Clique aqui</b></summary>
+                                    <hr />
+                                    <p class="text-danger font-weight-bold">Infectados: <span id="TOB" class="text-danger float-right">--</span></p>
+                                    <p class="text-secondary font-weight-bold">Obitos: <span id="TOMB" class="float-right text-secondary">--</span></p>
+                                    <p class="text-success font-weight-bold">Quantidade de cidades: <span id="TOPB" class="float-right text-success">--</span></p>
+                                    <hr>
+                                    <div id="TO"></div>
+                                </details>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="container">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <p> Desenvolvi esse site com o proposito de atualizar a todos em tempo real, como anda uma parte do mundo e principalmente nosso Brasil com essa nova pandemia <strong>Coronavírus</strong></p>
+                <hr>
+                <p> Tem alguma sugestão de melhoria? Encontrou algum erro? Me envia por favor, esse é meu instagram basta clicar <a class="text-primary font-weight-bold" href="https://www.instagram.com/eikebenizio"><i class="fab fa-instagram text-primary"></i> eikebenizio</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/e30cc27e8d.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="vendor/chart.js/Chart.js"></script>
+
+</body>
+
+</html>
