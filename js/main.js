@@ -181,33 +181,33 @@
             
             var j = 0
 
-            var acpb = -1
-            var alpb = -1
-            var appb = -1
-            var ampb = -1
-            var bapb = -1
-            var cepb = -1
-            var dfpb = -1
-            var espb = -1
-            var gopb = -1
-            var mapb = -1
-            var mtpb = -1
-            var mspb = -1
-            var mgpb = -1
-            var prpb = -1
-            var pbpb = -1
-            var papb = -1
-            var pepb = -1
-            var pipb = -1
-            var rnpb = -1
-            var rspb = -1
-            var rjpb = -1
-            var ropb = -1
-            var rrpb = -1
-            var scpb = -1
-            var sepb = -1
-            var sppb = -1
-            var topb = -1
+            var acpb = 0
+            var alpb = 0
+            var appb = 0
+            var ampb = 0
+            var bapb = 0
+            var cepb = 0
+            var dfpb = 0
+            var espb = 0
+            var gopb = 0
+            var mapb = 0
+            var mtpb = 0
+            var mspb = 0
+            var mgpb = 0
+            var prpb = 0
+            var pbpb = 0
+            var papb = 0
+            var pepb = 0
+            var pipb = 0
+            var rnpb = 0
+            var rspb = 0
+            var rjpb = 0
+            var ropb = 0
+            var rrpb = 0
+            var scpb = 0
+            var sepb = 0
+            var sppb = 0
+            var topb = 0
             var aca = 0
             var aco = 0
             var ala = 0
@@ -275,17 +275,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleAC.appendChild(p)
-                    aca += parseInt(brasil[j].split(',')[5])
-                    aco += parseInt(brasil[j].split(',')[4])
+                    aca += parseInt(brasil[j].split(',')[7])
+                    aco += parseInt(brasil[j].split(',')[6])
                     acpb += 1
                     settings.eleACB.innerHTML = fN(aca)
                     settings.eleACMB.innerHTML = fN(aco)
@@ -301,17 +301,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleAL.appendChild(p)
-                    ala += parseInt(brasil[j].split(',')[5])
-                    alo += parseInt(brasil[j].split(',')[4])
+                    ala += parseInt(brasil[j].split(',')[7])
+                    alo += parseInt(brasil[j].split(',')[6])
                     alpb += 1
                     settings.eleALB.innerHTML = fN(ala)
                     settings.eleALMB.innerHTML = fN(alo)
@@ -327,17 +327,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleAP.appendChild(p)
-                    apa += parseInt(brasil[j].split(',')[5])
-                    apo += parseInt(brasil[j].split(',')[4])
+                    apa += parseInt(brasil[j].split(',')[7])
+                    apo += parseInt(brasil[j].split(',')[6])
                     appb += 1
                     settings.eleAPB.innerHTML = fN(apa)
                     settings.eleAPMB.innerHTML = fN(apo)
@@ -353,17 +353,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleAM.appendChild(p)
-                    ama += parseInt(brasil[j].split(',')[5])
-                    amo += parseInt(brasil[j].split(',')[4])
+                    ama += parseInt(brasil[j].split(',')[7])
+                    amo += parseInt(brasil[j].split(',')[6])
                     ampb += 1
                     settings.eleAMB.innerHTML = fN(ama)
                     settings.eleAMMB.innerHTML = fN(amo)
@@ -379,17 +379,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleBA.appendChild(p)
-                    baa += parseInt(brasil[j].split(',')[5])
-                    bao += parseInt(brasil[j].split(',')[4])
+                    baa += parseInt(brasil[j].split(',')[7])
+                    bao += parseInt(brasil[j].split(',')[6])
                     bapb += 1
                     settings.eleBAB.innerHTML = fN(baa)
                     settings.eleBAMB.innerHTML = fN(bao)
@@ -405,17 +405,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleCE.appendChild(p)
-                    cea += parseInt(brasil[j].split(',')[5])
-                    ceo += parseInt(brasil[j].split(',')[4])
+                    cea += parseInt(brasil[j].split(',')[7])
+                    ceo += parseInt(brasil[j].split(',')[6])
                     cepb += 1
                     settings.eleCEB.innerHTML = fN(cea)
                     settings.eleCEMB.innerHTML = fN(ceo)
@@ -431,17 +431,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleDF.appendChild(p)
-                    dfa += parseInt(brasil[j].split(',')[5])
-                    dfo += parseInt(brasil[j].split(',')[4])
+                    dfa += parseInt(brasil[j].split(',')[7])
+                    dfo += parseInt(brasil[j].split(',')[6])
                     dfpb += 1
                     settings.eleDFB.innerHTML = fN(dfa)
                     settings.eleDFMB.innerHTML = fN(dfo)
@@ -457,17 +457,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleES.appendChild(p)
-                    esa += parseInt(brasil[j].split(',')[5])
-                    eso += parseInt(brasil[j].split(',')[4])
+                    esa += parseInt(brasil[j].split(',')[7])
+                    eso += parseInt(brasil[j].split(',')[6])
                     espb += 1
                     settings.eleESB.innerHTML = fN(esa)
                     settings.eleESMB.innerHTML = fN(eso)
@@ -484,17 +484,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleGO.appendChild(p)
-                    goa += parseInt(brasil[j].split(',')[5])
-                    goo += parseInt(brasil[j].split(',')[4])
+                    goa += parseInt(brasil[j].split(',')[7])
+                    goo += parseInt(brasil[j].split(',')[6])
                     gopb += 1
                     settings.eleGOB.innerHTML = fN(goa)
                     settings.eleGOMB.innerHTML = fN(goo)
@@ -510,17 +510,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleMA.appendChild(p)
-                    maa += parseInt(brasil[j].split(',')[5])
-                    mao += parseInt(brasil[j].split(',')[4])
+                    maa += parseInt(brasil[j].split(',')[7])
+                    mao += parseInt(brasil[j].split(',')[6])
                     mapb += 1
                     settings.eleMAB.innerHTML = fN(maa)
                     settings.eleMAMB.innerHTML = fN(mao)
@@ -536,17 +536,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleMT.appendChild(p)
-                    mta += parseInt(brasil[j].split(',')[5])
-                    mto += parseInt(brasil[j].split(',')[4])
+                    mta += parseInt(brasil[j].split(',')[7])
+                    mto += parseInt(brasil[j].split(',')[6])
                     mtpb += 1
                     settings.eleMTB.innerHTML = fN(mta)
                     settings.eleMTMB.innerHTML = fN(mto)
@@ -562,17 +562,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleMS.appendChild(p)
-                    msa += parseInt(brasil[j].split(',')[5])
-                    mso += parseInt(brasil[j].split(',')[4])
+                    msa += parseInt(brasil[j].split(',')[7])
+                    mso += parseInt(brasil[j].split(',')[6])
                     mspb += 1
                     settings.eleMSB.innerHTML = fN(msa)
                     settings.eleMSMB.innerHTML = fN(mso)
@@ -588,17 +588,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleMG.appendChild(p)
-                    mga += parseInt(brasil[j].split(',')[5])
-                    mgo += parseInt(brasil[j].split(',')[4])
+                    mga += parseInt(brasil[j].split(',')[7])
+                    mgo += parseInt(brasil[j].split(',')[6])
                     mgpb += 1
                     settings.eleMGB.innerHTML = fN(mga)
                     settings.eleMGMB.innerHTML = fN(mgo)
@@ -614,17 +614,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.elePR.appendChild(p)
-                    pra += parseInt(brasil[j].split(',')[5])
-                    pro += parseInt(brasil[j].split(',')[4])
+                    pra += parseInt(brasil[j].split(',')[7])
+                    pro += parseInt(brasil[j].split(',')[6])
                     prpb += 1
                     settings.elePRB.innerHTML = fN(pra)
                     settings.elePRMB.innerHTML = fN(pro)
@@ -640,17 +640,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.elePB.appendChild(p)
-                    pba += parseInt(brasil[j].split(',')[5])
-                    pbo += parseInt(brasil[j].split(',')[4])
+                    pba += parseInt(brasil[j].split(',')[7])
+                    pbo += parseInt(brasil[j].split(',')[6])
                     pbpb += 1
                     settings.elePBB.innerHTML = fN(pba)
                     settings.elePBMB.innerHTML = fN(pbo)
@@ -666,17 +666,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.elePA.appendChild(p)
-                    paa += parseInt(brasil[j].split(',')[5])
-                    pao += parseInt(brasil[j].split(',')[4])
+                    paa += parseInt(brasil[j].split(',')[7])
+                    pao += parseInt(brasil[j].split(',')[6])
                     papb += 1
                     settings.elePAB.innerHTML = fN(paa)
                     settings.elePAMB.innerHTML = fN(pao)
@@ -692,17 +692,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.elePE.appendChild(p)
-                    pea += parseInt(brasil[j].split(',')[5])
-                    peo += parseInt(brasil[j].split(',')[4])
+                    pea += parseInt(brasil[j].split(',')[7])
+                    peo += parseInt(brasil[j].split(',')[6])
                     pepb += 1
                     settings.elePEB.innerHTML = fN(pea)
                     settings.elePEMB.innerHTML = fN(peo)
@@ -718,17 +718,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.elePI.appendChild(p)
-                    pia += parseInt(brasil[j].split(',')[5])
-                    pio += parseInt(brasil[j].split(',')[4])
+                    pia += parseInt(brasil[j].split(',')[7])
+                    pio += parseInt(brasil[j].split(',')[6])
                     pipb += 1
                     settings.elePIB.innerHTML = fN(pia)
                     settings.elePIMB.innerHTML = fN(pio)
@@ -744,17 +744,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleRN.appendChild(p)
-                    rna += parseInt(brasil[j].split(',')[5])
-                    rno += parseInt(brasil[j].split(',')[4])
+                    rna += parseInt(brasil[j].split(',')[7])
+                    rno += parseInt(brasil[j].split(',')[6])
                     rnpb += 1
                     settings.eleRNB.innerHTML = fN(rna)
                     settings.eleRNMB.innerHTML = fN(rno)
@@ -770,17 +770,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleRS.appendChild(p)
-                    rsa += parseInt(brasil[j].split(',')[5])
-                    rso += parseInt(brasil[j].split(',')[4])
+                    rsa += parseInt(brasil[j].split(',')[7])
+                    rso += parseInt(brasil[j].split(',')[6])
                     rspb += 1
                     settings.eleRSB.innerHTML = fN(rsa)
                     settings.eleRSMB.innerHTML = fN(rso)
@@ -797,17 +797,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleRJ.appendChild(p)
-                    rja += parseInt(brasil[j].split(',')[5])
-                    rjo += parseInt(brasil[j].split(',')[4])
+                    rja += parseInt(brasil[j].split(',')[7])
+                    rjo += parseInt(brasil[j].split(',')[6])
                     rjpb += 1
                     settings.eleRJB.innerHTML = fN(rja)
                     settings.eleRJMB.innerHTML = fN(rjo)
@@ -823,17 +823,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleRO.appendChild(p)
-                    roa += parseInt(brasil[j].split(',')[5])
-                    roo += parseInt(brasil[j].split(',')[4])
+                    roa += parseInt(brasil[j].split(',')[7])
+                    roo += parseInt(brasil[j].split(',')[6])
                     ropb += 1
                     settings.eleROB.innerHTML = fN(roa)
                     settings.eleROMB.innerHTML = fN(roo)
@@ -849,17 +849,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleRR.appendChild(p)
-                    rra += parseInt(brasil[j].split(',')[5])
-                    rro += parseInt(brasil[j].split(',')[4])
+                    rra += parseInt(brasil[j].split(',')[7])
+                    rro += parseInt(brasil[j].split(',')[6])
                     rrpb += 1
                     settings.eleRRB.innerHTML = fN(rra)
                     settings.eleRRMB.innerHTML = fN(rro)
@@ -875,17 +875,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleSC.appendChild(p)
-                    sca += parseInt(brasil[j].split(',')[5])
-                    sco += parseInt(brasil[j].split(',')[4])
+                    sca += parseInt(brasil[j].split(',')[7])
+                    sco += parseInt(brasil[j].split(',')[6])
                     scpb += 1
                     settings.eleSCB.innerHTML = fN(sca)
                     settings.eleSCMB.innerHTML = fN(sco)
@@ -901,17 +901,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleSE.appendChild(p)
-                    sea += parseInt(brasil[j].split(',')[5])
-                    seo += parseInt(brasil[j].split(',')[4])
+                    sea += parseInt(brasil[j].split(',')[7])
+                    seo += parseInt(brasil[j].split(',')[6])
                     sepb += 1
                     settings.eleSEB.innerHTML = fN(sea)
                     settings.eleSEMB.innerHTML = fN(seo)
@@ -927,17 +927,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleSP.appendChild(p)
-                    spa += parseInt(brasil[j].split(',')[5])
-                    spo += parseInt(brasil[j].split(',')[4])
+                    spa += parseInt(brasil[j].split(',')[7])
+                    spo += parseInt(brasil[j].split(',')[6])
                     sppb += 1
                     settings.eleSPB.innerHTML = fN(spa)
                     settings.eleSPMB.innerHTML = fN(spo)
@@ -953,17 +953,17 @@
                     p.className = 'text-info font-weight-bold'
                     p.innerHTML = brasil[j].split(',')[2]
                     span.className = 'float-right text-secondary'
-                    span.innerHTML = fN(brasil[j].split(',')[4])
+                    span.innerHTML = fN(brasil[j].split(',')[6])
                     span2.className = 'float-right text-danger'
-                    span2.innerHTML = fN(brasil[j].split(',')[5])
+                    span2.innerHTML = fN(brasil[j].split(',')[7])
                     span3.className = 'float-right'
                     span3.innerHTML = ' - '
                     p.appendChild(span)
                     p.appendChild(span3)
                     p.appendChild(span2)
                     settings.eleTO.appendChild(p)
-                    toa += parseInt(brasil[j].split(',')[5])
-                    too += parseInt(brasil[j].split(',')[4])
+                    toa += parseInt(brasil[j].split(',')[7])
+                    too += parseInt(brasil[j].split(',')[6])
                     topb += 1
                     settings.eleTOB.innerHTML = fN(toa)
                     settings.eleTOMB.innerHTML = fN(too)
